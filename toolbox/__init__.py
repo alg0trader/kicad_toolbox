@@ -2,10 +2,16 @@ import wx
 import wx.aui
 import pcbnew
 
+from . import junction
 from . import chamfer
 from . import taper
 from . import settings
 
+
+# Register junction plugin
+junctionPlugin = junction.JunctionPlugin()
+junctionPlugin.defaults()
+junctionPlugin.register()
 
 # Register chamfer plugin
 chamferPlugin = chamfer.ChamferPlugin()
