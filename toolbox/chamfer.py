@@ -2,12 +2,14 @@ import os
 import wx
 import pcbnew
 import inspect
-import os.path
 
 from .toolbox import get_path
 
 
 class ChamferPlugin(pcbnew.ActionPlugin):
+    """
+    Class for implementing the chamfer plugin.
+    """
     def __init__(self):
         pass
     

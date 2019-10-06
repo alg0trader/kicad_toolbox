@@ -7,6 +7,9 @@ from .toolbox import get_path
 
 
 class TaperPlugin(pcbnew.ActionPlugin):
+    """
+    Class for implementing the taper plugin.
+    """
     def __init__(self):
         pass
     
