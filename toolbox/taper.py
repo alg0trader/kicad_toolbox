@@ -26,8 +26,6 @@ class TaperPlugin(pcbnew.ActionPlugin):
         pass
 
 
-<<<<<<< HEAD
-# TODO: Figure out partial inheritance?
 class TaperTabUI(gui_base.SettingsDialogBase):
     """
     Class for applying taper UI overrided methods.
@@ -36,8 +34,6 @@ class TaperTabUI(gui_base.SettingsDialogBase):
         pass
 
 
-=======
->>>>>>> 312abc5233906c6e6809d61cde704a4e062bfb7f
 class Taper:
     pass
 
