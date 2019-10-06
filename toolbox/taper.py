@@ -19,13 +19,14 @@ class TaperPlugin(pcbnew.ActionPlugin):
         self.category = "Layout"
         self.pcbnew_icon_support = hasattr(self, "show_toolbar_button")
         self.show_toolbar_button = True
-        self.icon_file_name = os.path.join(os.sep, get_path(), 'toolbox_icons', 'taper.png')
+        self.icon_file_name = os.path.join(os.sep, get_path(), 'toolbox_icons', 'taper.svg')
         self.description = "Route tapered tracks in Pcbnew."
     
     def Run(self):
         pass
 
 
+<<<<<<< HEAD
 # TODO: Figure out partial inheritance?
 class TaperTabUI(gui_base.SettingsDialogBase):
     """
@@ -35,6 +36,8 @@ class TaperTabUI(gui_base.SettingsDialogBase):
         pass
 
 
+=======
+>>>>>>> 312abc5233906c6e6809d61cde704a4e062bfb7f
 class Taper:
     pass
 
