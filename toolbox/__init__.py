@@ -2,9 +2,9 @@ import wx
 import wx.aui
 import pcbnew
 
-import chamfer
-import taper
-import settings
+from . import chamfer
+from . import taper
+from . import settings
 
 
 # Register chamfer plugin

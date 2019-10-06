@@ -3,13 +3,13 @@ import wx
 import pcbnew
 import inspect
 
-import gui
+from . import gui
 from .toolbox import get_path
 
 
 class SettingsPlugin(pcbnew.ActionPlugin):
     """
-    Class for implementing the settings plugin feature.
+    Class for implementing the settings plugin.
     """
     def defaults(self):
         self.name = "Settings"
