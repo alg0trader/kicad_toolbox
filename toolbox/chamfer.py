@@ -3,6 +3,7 @@ import wx
 import pcbnew
 import inspect
 
+from . import gui_base
 from .toolbox import get_path
 
 
@@ -22,4 +23,12 @@ class ChamferPlugin(pcbnew.ActionPlugin):
         self.description = "Route chamfered tracks in Pcbnew."
     
     def Run(self):
+        pass
+
+
+class ChamferTabUI(gui_base.SettingsDialogBase):
+    """
+    Class for applying chamfer UI overrided methods.
+    """
+    def __init__(self):
         pass

@@ -3,7 +3,7 @@ import wx
 import pcbnew
 import inspect
 
-from . import gui
+from . import gui_base
 from .toolbox import get_path
 
 
@@ -23,7 +23,7 @@ class SettingsPlugin(pcbnew.ActionPlugin):
         dlg = False
         
         try:
-            dlg = gui.SettingsDialog()
+            dlg = SettingsUIDialog()
             if dlg.ShowModal() == wx.ID_OK:
                 # Check for active window
                 pass
@@ -32,3 +32,23 @@ class SettingsPlugin(pcbnew.ActionPlugin):
                 pass
         finally:
             if dlg: dlg.Destroy()
+
+
+class SettingsUIDialog(gui_base.SettingsDialogBase):
+    """
+    Class for inheriting dialog base class.
+    """
+    def __init__(self):
+        gui_base.SettingsDialogBase.__init__(self, None)
+
+        self.Centre()
+    
+    # Hack for new wxFormBuilder generating code incompatible with old wxPython
+    # noinspection PyMethodOverriding
+    def SetSizeHints(self, sz1, sz2):
+        try:
+            # wxPython 3
+            self.SetSizeHintsSz(sz1, sz2)
+        except TypeError:
+            # wxPython 4
+            super(SettingsUIDialog, self).SetSizeHints(sz1, sz2)

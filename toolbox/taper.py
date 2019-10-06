@@ -3,6 +3,7 @@ import wx
 import pcbnew
 import inspect
 
+from . import gui_base
 from .toolbox import get_path
 
 
@@ -23,3 +24,28 @@ class TaperPlugin(pcbnew.ActionPlugin):
     
     def Run(self):
         pass
+
+
+# TODO: Figure out partial inheritance?
+class TaperTabUI(gui_base.SettingsDialogBase):
+    """
+    Class for applying taper UI overrided methods.
+    """
+    def __init__(self):
+        pass
+
+
+class Taper:
+    pass
+
+
+class LinearTaper(Taper):
+    pass
+
+
+class ExponentialTaper(Taper):
+    pass
+
+
+class KlopfensteinTaper(Taper):
+    pass
